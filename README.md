@@ -1,6 +1,6 @@
 # 🎨 material-all-mangle-names
 
-**Transform your @material/web custom elements to unique names for Rollup builds!** 🚀
+**Transform @material/web element to unique names in your Rollup builds!** 🚀
 
 ---
 
@@ -25,17 +25,15 @@ npm i -D material-all-mangle-names
 Minimal `rollup.config.js` example:
 
 ```ts
-import resolve from '@rollup/plugin-node-resolve'
-import mdMangle from 'material-all-mangle-names'
+import {mdMangle} from 'material-all-mangle-names'
 
 export default {
-	input: 'src/main.js',
+	input: 'src/app.js',
 	output: {
 		file: 'dist/bundle.js',
 		format: 'esm',
 	},
 	plugins: [
-		resolve(),
 		mdMangle({
 			include: ['src/**/*'], // optional, files to include 🌟
 			exclude: ['node_modules/**'], // optional, files to exclude ❌
@@ -51,9 +49,9 @@ export default {
 ## 🛠️ Options
 
 | Option    | Type    | Default   | Description           |
-| --------- | ------- | --------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `include` | `string | string[]` | `undefined`           | Keep in mind, files under `node_modules/@material/web/` (recursive) will always get included. Specify additional files or patterns to include. 🌟 |
-| `exclude` | `string | string[]` | `['node_modules/**']` | Files to ignore. Node_modules is automatically ignored by default. Make sure to re-include node_modules if you want. ❌                           |
+| --------- | ------- | --------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `include` | `string | string[]` | `undefined`           | Files to include. Keep in mind, files under `node_modules/@material/web/` (recursive) are always included. 🌟 |
+| `exclude` | `string | string[]` | `['node_modules/**']` | Files to ignore. Node_modules is automatically ignored by default. Re-include if needed. ❌                   |
 
 ---
 
