@@ -1,17 +1,17 @@
-# 🎨 material-all-mangle-names
+# 🎨 material-web-mangle-names
 
-**Transform @material/web element to unique names in your Rollup builds!** 🚀
+**Transform @material/web elements to unique names in your Rollup builds!** 🚀
 
 ## 🔹 What it does
 
-`material-all-mangle-names` is a **Rollup plugin** that automatically **renames all @material/web custom elements** in your code (e.g., `<md-icon>`, `<md-elevated-button>`) with a unique suffix.
+`material-web-mangle-names` is a **Rollup plugin** that automatically **renames all @material/web custom elements** in your code (e.g., `<md-icon>`, `<md-elevated-button>`) with a unique suffix.
 
 This helps avoid **name collisions** when injecting custom elements into pages or content scripts, without breaking your imports! 🛡️
 
 ## 📦 Installation
 
 ```bash
-npm i -D material-all-mangle-names
+npm i -D material-web-mangle-names
 ```
 
 ## ⚡ Usage
@@ -19,7 +19,7 @@ npm i -D material-all-mangle-names
 Minimal `rollup.config.js` example:
 
 ```ts
-import {mdMangle} from 'material-all-mangle-names'
+import {mdMangle} from 'material-web-mangle-names'
 
 export default {
 	input: 'src/app.js',
